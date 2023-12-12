@@ -89,7 +89,7 @@ public class WebChecks {
      * Проверяет, что элемент имеет текст
      */
     public static void elementContainsText(SelenideElement element, String text) {
-        element.execute(Commands.checkSoft(Condition.text(text), null));
+        elementContainsText(element, text);;
     }
 
     /**
@@ -97,7 +97,7 @@ public class WebChecks {
      */
     public static void elementContainsText(SelenideElement element, List<String> texts) {
         for (String s : texts) {
-            element.execute(Commands.checkSoft(Condition.text(s), Duration.ofSeconds(10)));
+            elementContainsText(element, s);
         }
     }
 

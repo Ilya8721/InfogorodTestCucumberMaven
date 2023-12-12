@@ -13,7 +13,7 @@ public class CustomCommands
         extends Commands {
     @Nullable
     @Override
-    public <T> T execute(Object proxy, WebElementSource webElementSource, String methodName, @Nullable Object[] args) throws IOException {
+    public <T> T execute(Object proxy, WebElementSource webElementSource, String methodName, @Nullable Object[] args) {
         return super.execute(proxy, webElementSource, methodName, args);
     }
 }

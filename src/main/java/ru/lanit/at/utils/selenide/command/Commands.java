@@ -3,6 +3,7 @@ package ru.lanit.at.utils.selenide.command;
 import com.codeborne.selenide.Command;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebElementCondition;
 import com.codeborne.selenide.ex.ElementShould;
 import com.codeborne.selenide.ex.ElementShouldNot;
 import org.aeonbits.owner.ConfigFactory;
@@ -31,7 +32,7 @@ public class Commands {
      * @return - proxy элемент
      */
 
-    public static Command<SelenideElement> checkSoft(Condition condition, Duration duration) {
+    public static Command<SelenideElement> checkSoft(WebElementCondition condition, Duration duration) {
         return (proxy, locator, args) -> {
             try {
                 return proxy.should(condition, duration);
