@@ -50,7 +50,7 @@ public class DriverManager {
             options.put("enableVideo", cf.getEnableVideo());
             options.put("enableLog", cf.getEnableLog());
             Configuration.browserCapabilities.setCapability("selenoid:options", options);
-            Configuration.browserCapabilities.setCapability("sessionTimeout", "30m");
+            Configuration.timeout = 30000;
             Configuration.fileDownload = FileDownloadMode.FOLDER;
         } else {
             switch (cfg.webDriverBrowserName()) {
